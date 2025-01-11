@@ -17,6 +17,18 @@ const Counter = () => {
 
   return (
     <section className="text-center">
+      {/*  value by amount */}
+      <div>
+        <input
+          type="text"
+          value={incrementAmount}
+          onChange={(e) => setIncrementAmount(e.target.value)}
+        />
+        <button onClick={() => dispatch(incrementByAmount(addValue))}>
+          Add Amount
+        </button>
+      </div>
+
       <h1>{count}</h1>
 
       <div>
