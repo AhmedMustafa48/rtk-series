@@ -5,13 +5,13 @@ import { useDispatch } from "react-redux";
 import { postAdded } from "./postsSlice";
 
 const AddPostForm = () => {
+  const dispatch = useDispatch();
+
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
 
   const onTitleChanged = (e) => setTitle(e.target.value);
   const onContentChanged = (e) => setContent(e.target.value);
-
-  const dispatch = useDispatch();
 
   const onSavePostClicked = () => {
     if (title && content) {
